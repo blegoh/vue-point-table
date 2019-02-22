@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Demo from './Demo.vue'
-import PointTable from './components/PointTable'
+import PointTable from './plugin'
 
 Vue.config.productionTip = false
 

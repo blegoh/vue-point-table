@@ -1,6 +1,6 @@
 {
   "name": "vue-point-table",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "main": "dist/vue-point-table.min.js",
   "private": false,
   "license": "MIT",

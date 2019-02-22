@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import PointTable from './components/Table'
+import PointTable from './components/PointTable'
 import posts from './posts.json'
 import streets from './street.json'
 

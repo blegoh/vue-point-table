@@ -51,7 +51,7 @@ Template
 Scripts
 
 ```javascript
-import PointTable from './components/Table'
+import PointTable from './components/PointTable'
 import users from './users.json'
 
 export default {

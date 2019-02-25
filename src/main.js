@@ -1,8 +1,9 @@
 import Vue from 'vue'
-import Demo from './Demo.vue'
+import App from './App.vue'
+import './../node_modules/bulma/css/bulma.css'
 
 Vue.config.productionTip = false
 
 new Vue({
-  render: h => h(Demo)
+  render: h => h(App)
 }).$mount('#app')

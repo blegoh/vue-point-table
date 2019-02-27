@@ -1,12 +1,15 @@
-import Vue from 'vue'
 import PointTable from './PointTable'
 
-const Components = {
-  PointTable
+export default {
+  install (Vue, options) {
+    // Add a component or directive to your plugin, so it will be installed globally to your project.
+    Vue.component('point-table', PointTable)
+    // Add `Vue.mixin()` to inject options to all components.
+    Vue.mixin({
+      // Add component lifecycle hooks or properties.
+      created () {
+        console.log('Point Table component created hook!')
+      }
+    })
+  }
 }
-
-Object.keys(Components).forEach(name => {
-  Vue.component(name, Components[name])
-})
-
-export default Components

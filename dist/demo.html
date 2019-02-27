@@ -1,10 +1,40 @@
 <meta charset="utf-8">
 <title>vue-point-table demo</title>
-<script src="./vue-point-table.umd.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="./vue-point-table.js"></script>
 
-<link rel="stylesheet" href="./vue-point-table.css">
 
+<vue-point-table>
+    <template slot="p-head">
+        <tr>
+          <th>Name</th>
+          <th>Address</th>
+          <th>Phone</th>
+        </tr>
+    </template>
+    <template slot="p-filter">
+      <tr>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Phone</th>
+      </tr>
+    </template>
+    <template slot="p-body">
+      <tr>
+        <td>John Doe</td>
+        <td>21 Street</td>
+        <td>+627314691</td>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>22 Street</td>
+        <td>+627314692</td>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>23 Street</td>
+        <td>+627314693</td>
+      </tr>
+    </template>
+</vue-point-table>
 
-<script>
-console.log(vue-point-table)
-</script>

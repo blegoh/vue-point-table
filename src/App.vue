@@ -7,7 +7,7 @@
             Vue Point Table
           </h1>
         </div>
-      </div>      
+      </div>
     </section>
 
     <section class="section">
@@ -29,15 +29,11 @@
 </template>
 
 <script>
-import PointTable from './components/PointTable'
 import posts from './posts.json'
 import streets from './street.json'
 
 export default {
   name: 'app',
-  components: {
-    PointTable
-  },
   data () {
     return {
       streets: streets,

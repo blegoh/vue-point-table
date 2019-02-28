@@ -1,6 +1,6 @@
 {
   "name": "vue-point-table",
-  "version": "1.0.0",
+  "version": "1.0.7",
   "description": "Table component that support freeze column, fix header when scrolling down, and manage column visibility",
   "main": "./dist/vue-point-table.common.js",
   "private": false,
@@ -16,7 +16,7 @@
   "dependencies": {
     "bulma": "^0.7.4",
     "vue": "^2.6.6",
-    "vue-table-blegoh1": "^1.0.1"
+    "vue-table-blegoh1": "^1.0.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

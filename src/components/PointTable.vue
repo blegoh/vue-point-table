@@ -3,8 +3,7 @@
   <div class="columns">
     <!-- Search Box -->
     <div class="column">
-      <input 
-      v-model="search"
+      <input v-model="search"
       @keypress="page=1"
       class="input"
       type="search"
@@ -65,7 +64,7 @@
           </div>
         </div>
       </div>
-    </div>    
+    </div>
   </div>
   <div :id="uuid+'horizontal-scroll'" style="overflow-x:auto;" @scroll="horizontalScroll">
     <table class="table is-bordered is-fullwidth" :id="uuid+'main-table'">
@@ -228,10 +227,10 @@ export default {
     isCustomHeaders: function () {
       return !!this.customHeaders || this.hasHeadSlot;
     },
-    hasHeadSlot() {
+    hasHeadSlot () {
       return !!this.$slots['p-head']
     },
-    hasFilterSlot() {
+    hasFilterSlot () {
       return !!this.$slots['p-filter']
     },
     hasbodySlot() {
@@ -526,7 +525,7 @@ export default {
     window.addEventListener('scroll', this.tableHeader);
     window.addEventListener('scroll', this.colFixed);
     window.addEventListener('scroll', this.horizontalScroll);
-    window.addEventListener("resize", this.tableHeader);
+    window.addEventListener('resize', this.tableHeader);
     window.addEventListener('resize', this.horizontalScroll);
     window.addEventListener('resize', this.colFixed);
     window.addEventListener('resize', this.colHeight);

@@ -16,7 +16,7 @@
   "dependencies": {
     "bulma": "^0.7.4",
     "vue": "^2.6.6",
-    "vue-table-blegoh1": "^1.0.2"
+    "vue-point-table": "^1.0.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.4.0",

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import './../node_modules/bulma/css/bulma.css'
-import PointTable from 'vue-table-blegoh1'
+import PointTable from 'vue-point-table'
 
 Vue.use(PointTable)
 

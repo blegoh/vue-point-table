@@ -301,13 +301,13 @@ export default {
               if (!!this.$slots['p-head'][i].children[k].tag) {
                 fields[index++] = {
                   caption: (!!this.$slots['p-head'][i].children[k].children)?this.$slots['p-head'][i].children[k].children[0].text:"",
-                  colSpan: (!!this.$slots['p-head'][i].children[k].data.attrs.colspan)?this.$slots['p-head'][i].children[k].data.attrs.colspan:1,
-                  rowSpan: (!!this.$slots['p-head'][i].children[k].data.attrs.rowspan)?this.$slots['p-head'][i].children[k].data.attrs.rowspan:1
+                  colSpan: (!!this.$slots['p-head'][i].children[k].data && !!this.$slots['p-head'][i].children[k].data.attrs.colspan)?this.$slots['p-head'][i].children[k].data.attrs.colspan:1,
+                  rowSpan: (!!this.$slots['p-head'][i].children[k].data && !!this.$slots['p-head'][i].children[k].data.attrs.rowspan)?this.$slots['p-head'][i].children[k].data.attrs.rowspan:1
                 };
               }
             }
             customHeaders[idx++] = {
-              fields : fields
+              fields: fields
             }
           }
         }

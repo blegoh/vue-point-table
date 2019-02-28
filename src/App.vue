@@ -25,6 +25,47 @@
         <point-table :data="posts"/>
       </div>
     </section>
+
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Full Table</h1>
+        <point-table>
+          <template slot="p-head">
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+            </tr>
+          </template>
+          <template slot="p-filter">
+            <tr>
+              <th>Name</th>
+              <th>Address</th>
+              <th>Phone</th>
+            </tr>
+          </template>
+          <template slot="p-body">
+            <tr>
+              <td>John Doe</td>
+              <td>21 Street</td>
+              <td>+627314691</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>22 Street</td>
+              <td>+627314692</td>
+            </tr>
+            <tr>
+              <td>John Doe</td>
+              <td>23 Street</td>
+              <td>+627314693</td>
+            </tr>
+          </template>
+        </point-table>
+      </div>
+    </section>
+
+
   </div>
 </template>
 

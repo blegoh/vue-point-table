@@ -30,13 +30,6 @@
       <div class="container">
         <h1 class="title">Full Table</h1>
         <point-table>
-          <template slot="p-head">
-            <tr>
-              <th>Name</th>
-              <th>Address</th>
-              <th>Phone</th>
-            </tr>
-          </template>
           <template slot="p-filter">
             <tr>
               <th>Name</th>
@@ -65,6 +58,68 @@
       </div>
     </section>
 
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Full Table</h1>
+        <point-table>
+          <template slot="p-head">
+            <tr>
+              <th colspan="2"></th>
+              <th colspan="6">19 Nov</th>
+            </tr>
+            <tr>
+              <th colspan="2"></th>
+              <th colspan="3">Target</th>
+              <th colspan="3">Actual</th>
+            </tr>
+          </template>
+          <template slot="p-filter">
+            <tr>
+              <th>No</th>
+              <th>Name</th>
+              <th>Call</th>
+              <th>Ec</th>
+              <th>Value</th>
+              <th>Call</th>
+              <th>Ec</th>
+              <th>Value</th>
+            </tr>
+          </template>
+          <template slot="p-body">
+            <tr>
+              <td>1</td>
+              <td>Adhi Lorraine</td>
+              <td>5</td>
+              <td>3</td>
+              <td>750000</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Bagas Saputra</td>
+              <td>5</td>
+              <td>3</td>
+              <td>750000</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Bagus</td>
+              <td>5</td>
+              <td>3</td>
+              <td>650000</td>
+              <td>0</td>
+              <td>0</td>
+              <td>0</td>
+            </tr>
+          </template>
+        </point-table>
+      </div>
+    </section>
 
   </div>
 </template>

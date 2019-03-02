@@ -30,7 +30,7 @@
       <div class="container">
         <h1 class="title">Full Table</h1>
         <point-table>
-          <template slot="p-filter">
+          <template slot="p-head">
             <tr>
               <th>Name</th>
               <th>Address</th>
@@ -62,7 +62,7 @@
       <div class="container">
         <h1 class="title">Full Table</h1>
         <point-table>
-          <template slot="p-head">
+          <template slot="p-extra">
             <tr>
               <th colspan="2"></th>
               <th colspan="6">19 Nov</th>
@@ -73,7 +73,7 @@
               <th colspan="3">Actual</th>
             </tr>
           </template>
-          <template slot="p-filter">
+          <template slot="p-head">
             <tr>
               <th>No</th>
               <th>Name</th>

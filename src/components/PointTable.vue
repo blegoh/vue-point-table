@@ -225,13 +225,13 @@ export default {
       }
     },
     isCustomHeaders: function () {
-      return !!this.customHeaders || this.hasHeadSlot;
+      return !!this.customHeaders || this.hasExtraSlot;
+    },
+    hasExtraSlot () {
+      return !!this.$slots['p-extra']
     },
     hasHeadSlot () {
       return !!this.$slots['p-head']
-    },
-    hasFilterSlot () {
-      return !!this.$slots['p-filter']
     },
     hasbodySlot() {
       return !!this.$slots['p-body']
@@ -256,21 +256,21 @@ export default {
           }
         }
         return data;
-      }else {
+      } else {
         return null;
       }
     },
     dataHeaders: function(){
       if (!!this.headers) {
         return this.headers
-      } else if (this.hasFilterSlot) {
+      } else if (this.hasHeadSlot) {
         let headers = [];
         let idx = 0;
-        for (let i = 0; i < this.$slots['p-filter'].length; i++) {
-          if (!!this.$slots['p-filter'][i].tag) {
-            for (let k = 0; k < this.$slots['p-filter'][i].children.length; k++) {
-              if (!!this.$slots['p-filter'][i].children[k].tag) {
-                headers[idx++] = this.$slots['p-filter'][i].children[k].children[0].text;
+        for (let i = 0; i < this.$slots['p-head'].length; i++) {
+          if (!!this.$slots['p-head'][i].tag) {
+            for (let k = 0; k < this.$slots['p-head'][i].children.length; k++) {
+              if (!!this.$slots['p-head'][i].children[k].tag) {
+                headers[idx++] = this.$slots['p-head'][i].children[k].children[0].text;
               }
             }
           }
@@ -290,19 +290,19 @@ export default {
     dataCustomHeaders: function () {
       if (!!this.customHeaders) {
         return this.customHeaders
-      } else if (this.hasHeadSlot) {
+      } else if (this.hasExtraSlot) {
         let customHeaders = [];
         let idx = 0;
-        for (let i = 0; i < this.$slots['p-head'].length; i++) {
-          if (!!this.$slots['p-head'][i].tag) {
+        for (let i = 0; i < this.$slots['p-extra'].length; i++) {
+          if (!!this.$slots['p-extra'][i].tag) {
             let fields = [];
             let index = 0;
-            for (let k = 0; k < this.$slots['p-head'][i].children.length; k++) {
-              if (!!this.$slots['p-head'][i].children[k].tag) {
+            for (let k = 0; k < this.$slots['p-extra'][i].children.length; k++) {
+              if (!!this.$slots['p-extra'][i].children[k].tag) {
                 fields[index++] = {
-                  caption: (!!this.$slots['p-head'][i].children[k].children)?this.$slots['p-head'][i].children[k].children[0].text:"",
-                  colSpan: (!!this.$slots['p-head'][i].children[k].data && !!this.$slots['p-head'][i].children[k].data.attrs.colspan)?this.$slots['p-head'][i].children[k].data.attrs.colspan:1,
-                  rowSpan: (!!this.$slots['p-head'][i].children[k].data && !!this.$slots['p-head'][i].children[k].data.attrs.rowspan)?this.$slots['p-head'][i].children[k].data.attrs.rowspan:1
+                  caption: (!!this.$slots['p-extra'][i].children[k].children)?this.$slots['p-extra'][i].children[k].children[0].text:"",
+                  colSpan: (!!this.$slots['p-extra'][i].children[k].data && !!this.$slots['p-extra'][i].children[k].data.attrs.colspan)?this.$slots['p-extra'][i].children[k].data.attrs.colspan:1,
+                  rowSpan: (!!this.$slots['p-extra'][i].children[k].data && !!this.$slots['p-extra'][i].children[k].data.attrs.rowspan)?this.$slots['p-extra'][i].children[k].data.attrs.rowspan:1
                 };
               }
             }
